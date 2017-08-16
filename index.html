@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<title>Smoot, Bryan Unit 10 Project</title>
+	</head>
+		<header><h1>Reservation Project</h1>
+			<div> </div>
+			<div> </div>
+			<div> </div>
+			
+		</header>
+<body>
+		<div class="slideshow-container">
+  <div class="mySlides fade">
+		<img src="images/background_1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+	    <img src="images/background_2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+	    <img src="images/background_3.jpg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+	    <img src="images/background_4.jpg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+	    <img src="images/background_5.jpg" style="width:100%">
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">&laquo;</a>
+  <a class="next" onclick="plusSlides(1)">&#x00BB;</a>
+</div> </br>
+
+<div class="dots">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+</div>
+		<!-- Google API -->
+		<div id="map">
+			
+		</div>
+			<!-- Registration Module-->
+		<div class="Registration-Module">
+			<form class = form-inline reservation-form>
+				<div class="form-group">
+					<input type="text" name="first-name" placeholder="Wonder">
+					<input type="text" name="last-name" placeholder="Woman">
+				</div>
+					<div class="dropdown">
+						<button type="button" id="dropdownMenu1" onclick="myFunction()">
+							Select a Day
+						</button>
+						<div id="mydropdown" class="dropdown-content">
+						<ul>
+							<li><a href="#">Monday</a></li>
+							<li><a href="#">Tuesday</a></li>
+							<li><a href="#">Wednesday</a></li>
+							<li><a href="#">Thursday</a></li>
+							<li><a href="#">Friday</a></li>
+							<li><a href="#">Saturday</a></li>
+							<li><a href="#">Sunday</a></li>
+						</ul>
+					</div>
+				
+				<button id="setReservation" class="reservation-button">Set Reservation</button>
+			</form>
+			<ul class="reservations"></ul>
+		</div>
+
+		<script id="reservation-template" type="text/x-handlebars-template">
+			<li data-id = "{{reservationId}}">
+				<p>Thank you for placing a reservation {{name}}. Your reservation is all set for {{day}}</p>
+			</li>
+		</script>
+			
+			<!-- Social Media API -->
+		<div> 
+		</div>
+		<footer>Au Cheval</footer>
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+		<script src="main.js"></script>
+		<script async="" defer="" src="https://maps.googleapis.com/maps/apis/js?key=AIzaSyAUBXbVcffYSS-OyvyLSuhFlhdpYWCKr4Acallback=initMap""></script>
+	</body>
+	</html>
